@@ -7,7 +7,7 @@
 
 BOARD="bananapi"						# bananapi
 BRANCH="default"						# default=3.4.x, mainline=next
-RELEASE="wheezy"                                   		# jessie, wheezy or trusty
+RELEASE="jessie"                                   		# jessie, wheezy or trusty
 
 # numbers
 SDSIZE="1200"                               			# SD image size in MB
@@ -21,7 +21,7 @@ USEALLCORES="yes"                           			# Use all CPU cores for compiling
 
 # user 
 DEST_LANG="en_US.UTF-8"                     			# sl_SI.UTF-8, en_US.UTF-8
-TZDATA="Europe/Ljubljana"               			# Timezone
+TZDATA="Europe/Vienna"               			# Timezone
 ROOTPWD="1234"                              			# Must be changed @first login
 MAINTAINER="Igor Pecovnik"                  			# deb signature
 MAINTAINERMAIL="igor.pecovnik@****l.com"    			# deb signature
@@ -44,7 +44,7 @@ if [ -d "$SRC/lib" ]; then
     git pull 
 else
     # download SDK
-    git clone https://github.com/igorpecovnik/lib
+    git clone https://github.com/fishingbit/armbian-lib
 fi
 
 source $SRC/lib/main.sh
